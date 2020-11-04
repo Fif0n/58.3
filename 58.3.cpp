@@ -16,6 +16,7 @@ int main(int argc, char** argv)
  file1.open("c:\\dane_systemy1.txt");
  file2.open("c:\\dane_systemy2.txt");
  file3.open("c:\\dane_systemy3.txt");
+ fileOut.open("c:\\wyjscie.txt");
  bool first = true;
  int record = 1;
      while(!file1.eof())
@@ -48,10 +49,11 @@ int main(int argc, char** argv)
 				  }
                        
      }
- cout<<record;
+ fileOut<<record;
  file1.close();
  file2.close();
  file3.close();
+ fileOut.close();
 
  return 0;
 }
